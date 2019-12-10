@@ -26,38 +26,39 @@ class Generation():
         MDPClair=""
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
         nbligne = 0
-        Mot=[]
+        LMot=[]
         while fichier.readline():
             nbligne += 1
         fichier.close()
 
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
-        for i in range(0,nbligne-1):
-            Mot.append(fichier.readline())
+        for i in range(0,nbligne):
+            LMot.append(str(fichier.readline()))
         fichier.close()
 
         # 1-4 chiffres + animal
         # 1-4 chiffres + maj animal
         # animal + 1-4 chiffres
         # maj animal + 1-4 chiffres
-        for a in Mot:
+        for Mot in LMot:
+            Mot=Mot[:len(Mot)-1]
             for i in range(0, 9999):
-                MDPClair = a.lower() + str(('{0:04}'.format(i)))  # login + nombre
+                MDPClair = Mot + str(i)  # login + nombre
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-                MDPClair = str('{0:04}'.format(i)) + a.capitalize()  # nombre + login maj
+                MDPClair = str(i) + Mot.capitalize()  # nombre + login maj
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-                MDPClair = str('{0:04}'.format(i)) + a.lower()  # nombre + login
+                MDPClair = str(i) + Mot  # nombre + login
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-                MDPClair = a.capitalize() + str(('{0:04}'.format(i)))  # login maj + nombre
+                MDPClair = Mot.capitalize() + str(i)  # login maj + nombre
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
@@ -118,7 +119,7 @@ class Generation():
 
         return 0
 
-    def choix4(self):  # non ok
+    def choix4(self):  # OK
         # tete0123 et Tuti1234
         Mot = self.login
         for i in range(0, 9999):
