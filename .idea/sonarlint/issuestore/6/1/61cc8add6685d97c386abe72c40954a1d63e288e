@@ -1,0 +1,38 @@
+
+<python:S1481+"%Remove the unused local variable "i".(ÖÖ‹=
+Dpython:S1481s"'Remove the unused local variable "Mot".(íã¡Éşÿÿÿÿ
+Cpython:S1481k"+Remove the unused local variable "nbligne".(ç¸òĞ
+Hpython:S1481n"+Remove the unused local variable "nbligne".(ùªÍŒüÿÿÿÿ
+<python:S1481r"%Remove the unused local variable "i".(Åşs
+Ipython:S1481i",Remove the unused local variable "voyelles".(îÁÚèÿÿÿÿÿ
+>python:S1481„"%Remove the unused local variable "i".(İŒÉ·
+Cpython:S1481‡"%Remove the unused local variable "j".(¦Ã“£ıÿÿÿÿ
+Dpython:S1481”"+Remove the unused local variable "nbligne".(ç¸òĞ
+Ipython:S1481—"+Remove the unused local variable "nbligne".(ùªÍŒüÿÿÿÿ
+Cpython:S1481"%Remove the unused local variable "j".(¦Ã“£ıÿÿÿÿ
+=python:S1481›"%Remove the unused local variable "i".(Åşs
+upython:S117"YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(”Îû¾ıÿÿÿÿ
+tpython:S117"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ß¥ó…ıÿÿÿÿ
+ppython:S117"YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(­Ú«¤
+tpython:S117"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ß¥ó…ıÿÿÿÿ
+ppython:S117-"TRename this local variable "Mot" to match the regular expression ^[_a-z][a-z0-9_]*$.(íã¡Éşÿÿÿÿ
+vpython:S117."ZRename this local variable "TailleMot" to match the regular expression ^[_a-z][a-z0-9_]*$.(¸æÖ¡úÿÿÿÿ
+tpython:S1171"XRename this local variable "Binaire" to match the regular expression ^[_a-z][a-z0-9_]*$.(¹È÷Ãıÿÿÿÿ
+ppython:S1179"YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÈÆğÑ
+opython:S117:"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ïô–Ï
+ppython:S117D"TRename this local variable "Mot" to match the regular expression ^[_a-z][a-z0-9_]*$.(»“£¾úÿÿÿÿ
+upython:S117F"YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(×‘ÀÎÿÿÿÿÿ
+tpython:S117G"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ß¥ó…ıÿÿÿÿ
+vpython:S117K"ZRename this local variable "MDPClair2" to match the regular expression ^[_a-z][a-z0-9_]*$.(Î£»Ôÿÿÿÿÿ
+qpython:S117P"ZRename this local variable "MDPClair3" to match the regular expression ^[_a-z][a-z0-9_]*$.(™ãö†
+qpython:S117U"ZRename this local variable "MDPClair5" to match the regular expression ^[_a-z][a-z0-9_]*$.(ĞÔ›Ê
+vpython:S117Z"ZRename this local variable "MDPClair4" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÊœÍ€ûÿÿÿÿ
+qpython:S117_"ZRename this local variable "MDPClair6" to match the regular expression ^[_a-z][a-z0-9_]*$.(é½õª
+ppython:S117s"TRename this local variable "Mot" to match the regular expression ^[_a-z][a-z0-9_]*$.(íã¡Éşÿÿÿÿ
+rpython:S117†"URename this local variable "Ani1" to match the regular expression ^[_a-z][a-z0-9_]*$.(úÈš¦ùÿÿÿÿ
+qpython:S117‰"YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(§™¥ã
+upython:S117Š"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ß¥ó…ıÿÿÿÿ
+rpython:S117"URename this local variable "Ani1" to match the regular expression ^[_a-z][a-z0-9_]*$.(¡éÿüÿÿÿÿ
+rpython:S117Ÿ"URename this local variable "Ani2" to match the regular expression ^[_a-z][a-z0-9_]*$.(¹åÄ›úÿÿÿÿ
+vpython:S117 "YRename this local variable "MDPClair" to match the regular expression ^[_a-z][a-z0-9_]*$.(õ´Ûúÿÿÿÿ
+upython:S117¡"XRename this local variable "TestMDP" to match the regular expression ^[_a-z][a-z0-9_]*$.(ß¥ó…ıÿÿÿÿ

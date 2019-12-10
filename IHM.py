@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from Generation import *
 
 
 class Interface(Frame):
@@ -33,9 +34,9 @@ class Interface(Frame):
         self.mdp = Label(Frame1, text="Password : ")
         self.mdp.pack(side="right", padx=10)
 
-        self.labelNb = Label(Frame4, text="Nombres ajoutés : ").pack()
-        self.entryNb = Entry(Frame4)
-        self.entryNb.pack()
+        #self.labelNb = Label(Frame4, text="Nombres ajoutés : ").pack()
+        #self.entryNb = Entry(Frame4)
+        #self.entryNb.pack()
         # self.fichier = Button(Frame4, text="Fichier de mots", command=self.selectFile).pack()
 
 
@@ -55,14 +56,14 @@ class Interface(Frame):
         """
 
         self.choix = IntVar()
-        bouton1 = Radiobutton(Frame2, text="Nom + nombres rajoutés", variable=self.choix, value=1)
-        bouton2 = Radiobutton(Frame2, text="Lettre + nom + année", variable=self.choix, value=2)
-        bouton3 = Radiobutton(Frame2, text="Dérivé d'animal", variable=self.choix, value=3)
-        bouton4 = Radiobutton(Frame2, text="\'Classique\'", variable=self.choix, value=4)
-        bouton5 = Radiobutton(Frame2, text="Nombres devant ou derrière + maj optionnelle", variable=self.choix, value=5)
-        bouton6 = Radiobutton(Frame2, text="Voyelles -> nombres, reste en majuscule", variable=self.choix, value=6)
-        bouton7 = Radiobutton(Frame2, text="Animal à l'envers et dédoublé", variable=self.choix, value=7)
-        bouton8 = Radiobutton(Frame2, text="Concaténation de 2 animaux", variable=self.choix, value=8)
+        bouton1 = Radiobutton(Frame2, text="Lettre + nom + année", variable=self.choix, value=1)#
+        bouton2 = Radiobutton(Frame2, text="Dérivé d'animal", variable=self.choix, value=2)
+        bouton3 = Radiobutton(Frame2, text="\'Classique\'", variable=self.choix, value=3)#
+        bouton4 = Radiobutton(Frame2, text="Nombres devant ou derrière + maj optionnelle", variable=self.choix, value=4)
+        bouton5 = Radiobutton(Frame2, text="Nom + nombres rajoutés", variable=self.choix, value=5)
+        bouton6 = Radiobutton(Frame2, text="Animal à l'envers et dédoublé", variable=self.choix, value=6)#
+        bouton7 = Radiobutton(Frame2, text="Concaténation de 2 animaux", variable=self.choix, value=7)#
+        bouton9 = Radiobutton(Frame2, text="Tout  tester", variable=self.choix, value=9)
 
         bouton1.pack(anchor="w")
         bouton2.pack(anchor="w")
@@ -71,7 +72,7 @@ class Interface(Frame):
         bouton5.pack(anchor="w")
         bouton6.pack(anchor="w")
         bouton7.pack(anchor="w")
-        bouton8.pack(anchor="w")
+        bouton9.pack(anchor="w")
 
         self.Search = Button(Frame2, text="Chercher", command=self.search)
         self.Search.pack()
@@ -84,19 +85,54 @@ class Interface(Frame):
         self.bouton_quitter = Button(Frame3, text="Quitter", command=self.quit)
         self.bouton_quitter.pack()
 
-    def cliquer(self):
-        self.nb_clic += 1
-        self.message["text"] = "Vous avez cliqué {} fois.".format(self.nb_clic)
-
     def search(self):
-        self.res["text"]=(str(self.choix.get()))+" - "+str(self.entryNb.get())
+        # self.res["text"]=(str(self.choix.get()))+" - "+str(self.entryNb.get())
+
+        g = Generation(self.Imdp.get(),self.Ilogin.get())
+
+        a=self.choix.get()
+        rep=0
+
+        if a==0:
+            print("Choisissez une option")
+        elif a==1:
+            rep=g.choix1()
+        elif a==2:
+            rep=g.choix2()
+        elif a==3:
+            rep=g.choix3()
+        elif a==4:
+            rep=g.choix4()
+        elif a==5:
+            rep=g.choix5()
+        elif a==6:
+            rep=g.choix6()
+        elif a==7:
+            rep=g.choix7()
+        elif a==9:
+            if g.choix1()!=0:
+                rep=g.choix1()
+            elif g.choix2()!=0:
+                rep=g.choix2()
+            elif g.choix3()!=0:
+                rep=g.choix3()
+            elif g.choix4()!=0:
+                rep=g.choix4()
+            elif g.choix5()!=0:
+                rep=g.choix5()
+            elif g.choix6()!=0:
+                rep=g.choix6()
+            elif g.choix7()!=0:
+                rep=g.choix7()
+
+        if rep==0:
+            self.res["text"] = "Décryptage impossible"
+        else:
+            self.res["text"]=rep
 
     def selectFile(self):
         self.filename = filedialog.askopenfilename(initialdir="/", title="Select file",
                                                    filetypes=(("text files", "*.txt"), ("all files", "*.*")))
 
 
-interface = Interface(Tk())
 
-interface.mainloop()
-interface.destroy()

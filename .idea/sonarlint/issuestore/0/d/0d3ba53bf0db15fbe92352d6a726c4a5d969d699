@@ -1,0 +1,9 @@
+
+6python:S125%"Remove this commented out code.(À’ð«
+;python:S125Y"Remove this commented out code.(²ß½µÿÿÿÿÿ
+lpython:S3776X"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(àš¦ú
+spython:S117"WRename this local variable "Frame1" to match the regular expression ^[_a-z][a-z0-9_]*$.(á°ÇÔþÿÿÿÿ
+spython:S117"WRename this local variable "Frame2" to match the regular expression ^[_a-z][a-z0-9_]*$.(‘áøºþÿÿÿÿ
+spython:S117"WRename this local variable "Frame4" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ñº›Øûÿÿÿÿ
+npython:S117"WRename this local variable "Frame3" to match the regular expression ^[_a-z][a-z0-9_]*$.(½ûÏí
+{python:S1845X"cRename method "search" to prevent any misunderstanding/clash with field "Search" defined on line 77(àš¦ú
