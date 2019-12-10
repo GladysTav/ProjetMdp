@@ -3,7 +3,7 @@ tete:c8b2876ef38985c1af89530dd1dda717		:tete0123           pseudo + 4 chiffres  
 titi:3fbc7080bf8e718d4e8edd2eb596d3a7		:Xtiti1995          lettre + pseudo + 4 chiffres        1   V
 toto:48e7fd1957261b740df9188b851b8149		:Faucon30           animal + 2 chiffres                 2   V
 tutu:16b620e2a95347ef8f3030e52900e8c5		:123pandas          3 chiffres + animal sans maj        2   V
-tyty:d4488ccf0e5f906d1c55ad35379eaf4c        S8NGL88R           voyelle->chiffre, reste en maj      5   V                                                       5
+tyty:d4488ccf0e5f906d1c55ad35379eaf4c       :S8NGL88R           voyelle->chiffre, reste en maj      5   V                                                       5
 tatu:22b1235b36d51ff7a96527cbb9cdf2b7		:dranacdranac       animal retourné x 2                 6   V
 tota:3eeca09a177fb06bf02e3291e72bdfe5		:morsetigre         animal + animal                     7   V
 tuti:a7d349a1dab3727b7442ed4de450e091		:Tuti1234           pseudo avec maj + 4 chiffres        4   V
