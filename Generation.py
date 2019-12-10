@@ -6,7 +6,7 @@ class Generation():
         self.mdp = mdp
         self.login = login
 
-    def choix1(self):
+    def choix1(self): # OK Xtiti1995
         for i in range(65, 91):
             for j in range(1920, 2000):
                 MDPClair = chr(i) + self.login + str(j) # min login année
@@ -21,24 +21,60 @@ class Generation():
                     return MDPClair
         return 0
 
-    def choix2(self): #le choix 2 est pas encore fait
-        voyelles = ["a","e","i","o","u"]
+    def choix2(self): # non ok Faucon30 OK mais pas 123pandas
+        # Faucon30 et 123pandas
+        MDPClair=""
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
         nbligne = 0
-
+        Mot=[]
         while fichier.readline():
             nbligne += 1
         fichier.close()
 
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
-        for i in range(0,250):
-            Mot = list(fichier.readline())
+        for i in range(0,nbligne-1):
+            Mot.append(fichier.readline())
+        fichier.close()
 
+        # 1-4 chiffres + animal
+        # 1-4 chiffres + maj animal
+        # animal + 1-4 chiffres
+        # maj animal + 1-4 chiffres
+        for a in Mot:
+            for j in range(0, 9999):
+                MDPClair = a + str(j) # animal nombre
+                TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
+                if TestMDP == self.mdp:
+                    return MDPClair
+
+                MDPClair = str(j) + a # nombre animal
+                if a=="pandas":
+                    print(MDPClair)
+                TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
+                if TestMDP == self.mdp:
+                    return MDPClair
+
+            Binaire = str(dec2bin(j, len(a)))
+            if Binaire[0] == "1":  # Met en majuscule
+                a=a[0].upper()+a[1:len(a)-1]
+            else:  # met en minuscule
+                a=a[0].lower()+a[1:len(a)-1]
+
+            for j in range(0, 9999):
+                MDPClair = a + str(j) # animal nombre
+                TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
+                if TestMDP == self.mdp:
+                    return MDPClair
+
+                MDPClair = str(j) + a # nombre animal
+                TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
+                if TestMDP == self.mdp:
+                    return MDPClair
         return 0
 
 
-    def choix3(self):
-
+    def choix3(self): # OK
+        # TaTa et lion
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
         nbligne = 0
 
@@ -91,8 +127,8 @@ class Generation():
 
         return 0
 
-    def choix4(self):
-
+    def choix4(self): # non ok
+        # tete0123 et Tuti1234
         Mot = self.login
         for i in range(0,1000):
             MDPClair = Mot + str(('{0:01}'.format(i)))
@@ -130,7 +166,7 @@ class Generation():
         return 0
 
 
-    def choix5(self):  #nom+nombres
+    def choix5(self):  # changé toutes les voyelles par un nombre et mis le tout en majuscule
         for j in range(0, 9999):
             MDPClair = self.login + str(j)  # login chiffre
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
@@ -140,8 +176,8 @@ class Generation():
 
 
 
-    def choix6(self):
-
+    def choix6(self): # OK
+        # dranacdranac
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
         nbligne = 0
         while fichier.readline():
@@ -163,7 +199,8 @@ class Generation():
 
         return 0
 
-    def choix7(self):
+    def choix7(self):# OK
+        # morsetigre
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
         nbligne = 0
 
