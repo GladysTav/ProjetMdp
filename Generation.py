@@ -130,37 +130,26 @@ class Generation():
     def choix4(self): # non ok
         # tete0123 et Tuti1234
         Mot = self.login
-        for i in range(0,1000):
-            MDPClair = Mot + str(('{0:01}'.format(i)))
+        for i in range(0,9999):
+            MDPClair = Mot + str(('{0:04}'.format(i))) #login + nombre
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
                 return MDPClair
 
-            MDPClair2 = str('{0:01}'.format(i)) + Mot.capitalize()
-            TestMDP = hashlib.md5(MDPClair2.encode()).hexdigest()
+            MDPClair = str('{0:04}'.format(i)) + Mot.capitalize() #nombre + login maj
+            TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
-                return MDPClair2
+                return MDPClair
 
-            MDPClair3 = str('{0:01}'.format(i)) + Mot
-            TestMDP = hashlib.md5(MDPClair3.encode()).hexdigest()
+            MDPClair = str('{0:04}'.format(i)) + Mot #nombre + login
+            TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
-                return MDPClair3
+                return MDPClair
 
-            MDPClair5 = Mot.capitalize() + str(('{0:01}'.format(i)))
-            TestMDP = hashlib.md5(MDPClair5.encode()).hexdigest()
+            MDPClair = Mot.capitalize() + str(('{0:04}'.format(i))) #login maj + nombre
+            TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
-                return MDPClair5
-
-            MDPClair4 = str(('{0:01}'.format(i))) + Mot.capitalize() + str(('{0:01}'.format(i)))
-            TestMDP = hashlib.md5(MDPClair5.encode()).hexdigest()
-            if TestMDP == self.mdp:
-                return MDPClair4
-
-            MDPClair6 = str(('{0:01}'.format(i))) + Mot + str(('{0:01}'.format(i)))
-            TestMDP = hashlib.md5(MDPClair5.encode()).hexdigest()
-            if TestMDP == self.mdp:
-                return MDPClair6
-
+                return MDPClair
 
         # print(self.login + " : " + self.mdp)
         return 0
