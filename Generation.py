@@ -41,32 +41,23 @@ class Generation():
         # animal + 1-4 chiffres
         # maj animal + 1-4 chiffres
         for a in Mot:
-            for j in range(0, 9999):
-                MDPClair = a + str(j) # animal nombre
+            for i in range(0, 9999):
+                MDPClair = a.lower() + str(('{0:04}'.format(i)))  # login + nombre
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-                MDPClair = str(j) + a # nombre animal
-                if a=="pandas":
-                    print(MDPClair)
+                MDPClair = str('{0:04}'.format(i)) + a.capitalize()  # nombre + login maj
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-            Binaire = str(dec2bin(j, len(a)))
-            if Binaire[0] == "1":  # Met en majuscule
-                a=a[0].upper()+a[1:len(a)-1]
-            else:  # met en minuscule
-                a=a[0].lower()+a[1:len(a)-1]
-
-            for j in range(0, 9999):
-                MDPClair = a + str(j) # animal nombre
+                MDPClair = str('{0:04}'.format(i)) + a.lower()  # nombre + login
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
 
-                MDPClair = str(j) + a # nombre animal
+                MDPClair = a.capitalize() + str(('{0:04}'.format(i)))  # login maj + nombre
                 TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
                 if TestMDP == self.mdp:
                     return MDPClair
@@ -127,26 +118,26 @@ class Generation():
 
         return 0
 
-    def choix4(self): # non ok
+    def choix4(self):  # non ok
         # tete0123 et Tuti1234
         Mot = self.login
-        for i in range(0,9999):
-            MDPClair = Mot + str(('{0:04}'.format(i))) #login + nombre
+        for i in range(0, 9999):
+            MDPClair = Mot + str(('{0:04}'.format(i)))  # login + nombre
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
                 return MDPClair
 
-            MDPClair = str('{0:04}'.format(i)) + Mot.capitalize() #nombre + login maj
+            MDPClair = str('{0:04}'.format(i)) + Mot.capitalize()  # nombre + login maj
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
                 return MDPClair
 
-            MDPClair = str('{0:04}'.format(i)) + Mot #nombre + login
+            MDPClair = str('{0:04}'.format(i)) + Mot  # nombre + login
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
                 return MDPClair
 
-            MDPClair = Mot.capitalize() + str(('{0:04}'.format(i))) #login maj + nombre
+            MDPClair = Mot.capitalize() + str(('{0:04}'.format(i)))  # login maj + nombre
             TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
             if TestMDP == self.mdp:
                 return MDPClair
