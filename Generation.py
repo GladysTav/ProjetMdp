@@ -21,7 +21,7 @@ class Generation():
                     return MDPClair
         return 0
 
-    def choix2(self): # non ok Faucon30 OK mais pas 123pandas
+    def choix2(self): # OK
         # Faucon30 et 123pandas
         MDPClair=""
         fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
@@ -36,10 +36,6 @@ class Generation():
             LMot.append(str(fichier.readline()))
         fichier.close()
 
-        # 1-4 chiffres + animal
-        # 1-4 chiffres + maj animal
-        # animal + 1-4 chiffres
-        # maj animal + 1-4 chiffres
         for Mot in LMot:
             Mot=Mot[:len(Mot)-1]
             for i in range(0, 9999):
@@ -148,11 +144,34 @@ class Generation():
 
 
     def choix5(self):  # changé toutes les voyelles par un nombre et mis le tout en majuscule
-        for j in range(0, 9999):
-            MDPClair = self.login + str(j)  # login chiffre
-            TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
-            if TestMDP == self.mdp:
-                return MDPClair
+        MDPClair = ""
+        fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
+        nbligne = 0
+        LMot = []
+        while fichier.readline():
+            nbligne += 1
+        fichier.close()
+
+        fichier = open("dico_animaux.txt", "r", encoding="UTF-8")
+        for i in range(0, nbligne):
+            LMot.append(str(fichier.readline()))
+        fichier.close()
+
+        for Mot in LMot:
+            Mot = Mot[:len(Mot) - 1]
+            for i in range(0, 9):
+                MDPClair=""
+                for l in Mot:
+                    if (l == 'a' or l == 'e' or l == 'i' or l == 'o' or l == 'u' or l == 'y' or l == 'A' or l == 'E' or l == 'I'
+                            or l == 'O' or l == 'U' or l == 'Y' or l == 'é' or l == 'è'):
+            # if voyelle -> nombre entre 1 et 9
+                        MDPClair+=str(i)
+                    else:
+            # else : maj
+                        MDPClair += str(l).upper()
+                TestMDP = hashlib.md5(MDPClair.encode()).hexdigest()
+                if TestMDP == self.mdp:
+                    return MDPClair
         return 0
 
 
