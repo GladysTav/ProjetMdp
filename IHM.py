@@ -63,7 +63,7 @@ class Interface(Frame):
         bouton5 = Radiobutton(Frame2, text="Voyelles->nombre, le reste en majuscule", variable=self.choix, value=5)
         bouton6 = Radiobutton(Frame2, text="Animal à l'envers et dédoublé", variable=self.choix, value=6)#
         bouton7 = Radiobutton(Frame2, text="Concaténation de 2 animaux", variable=self.choix, value=7)#
-        bouton9 = Radiobutton(Frame2, text="Tout  tester", variable=self.choix, value=9)
+        bouton9 = Radiobutton(Frame2, text="Tout  tester (/!\\ surchauffe /!\\)", variable=self.choix, value=9)
 
         bouton1.pack(anchor="w")
         bouton2.pack(anchor="w")
