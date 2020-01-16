@@ -2,7 +2,7 @@ tata:d31259e2b584d457fa45c2c7bb58f89d		TaTa               pseudo modifié par ma
 tete:c8b2876ef38985c1af89530dd1dda717		tete0123           pseudo + 4 chiffres                 4   V
 titi:3fbc7080bf8e718d4e8edd2eb596d3a7		Xtiti1995          lettre + pseudo + 4 chiffres        1   V
 toto:48e7fd1957261b740df9188b851b8149		Faucon30           animal + 2 chiffres                 2   V
-tutu:16b620e2a95347ef8f3030e52900e8c5		123pandas          3 chiffres + animal sans maj        2   V
+tutu:16b620e2a95347ef8f3030e52900e8c5   123pandas          3 chiffres + animal sans maj        2   V
 tyty:d4488ccf0e5f906d1c55ad35379eaf4c   S8NGL88R           voyelle->chiffre, reste en maj      5   V
 tatu:22b1235b36d51ff7a96527cbb9cdf2b7		dranacdranac       animal retourné x 2                 6   V
 tota:3eeca09a177fb06bf02e3291e72bdfe5		morsetigre         animal + animal                     7   V
