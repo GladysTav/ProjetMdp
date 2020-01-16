@@ -1,0 +1,12 @@
+Fonctions.py                  Contient la fonction de cryptage md5
+Generation.py                 Contient les fonctions de génération de mdp en md5 selon le choix
+IHM.py                        Contient la classe créant l'interface
+main.py                       Crée l'IHM et fait le lien avec les fonctions
+
+dico_animaux.txt              Contient la liste des animaux
+passtext.txt                  Liste des mots de passe à décrypter
+
+possibilités.txt              Fichier pour l'avancement de la résolution du projet
+
+test md5.py                   Test des fonctions en mode console, tous les mots de passe sur tous les choix
+test.py                       Test des fonctions en mode console
